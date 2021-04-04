@@ -8,6 +8,7 @@
         <item name="android:verticalSpacing">1dp</item>
         <item name="horizontalMargin">0dp</item>
         <item name="browsePaddingStart">20dp</item>
+
         <item name="rowHeaderStyle">@style/AppTheme.Leanback.Row</item>
 
 <!--        for fragment margin satrt and end-->

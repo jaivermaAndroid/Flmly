@@ -10,6 +10,8 @@ import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.Typeface
 import android.graphics.drawable.LayerDrawable
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
@@ -46,9 +48,12 @@ import org.jsoup.Jsoup
 import java.io.UnsupportedEncodingException
 
 
-class HomeActivity : FragmentActivity() {
+class HomeActivity : FragmentActivity(),View.OnClickListener {
     lateinit var sharedPreferences: SharedPreferences
     lateinit var layout: ConstraintLayout
+    lateinit var layoutKeyboard:LinearLayout
+    lateinit var layoutApl:ConstraintLayout
+    lateinit var layoutNum:ConstraintLayout
     lateinit var layoutSetting: ConstraintLayout
     lateinit var etEmail: AppCompatEditText
     lateinit var etPass: AppCompatEditText
@@ -71,6 +76,70 @@ class HomeActivity : FragmentActivity() {
     var tempsearchPos: String = ""
 
 
+//    keybord keys
+
+    lateinit var tva:TextView
+    lateinit var tvb:TextView
+    lateinit var tvc:TextView
+    lateinit var tvd:TextView
+    lateinit var tve:TextView
+    lateinit var tvf:TextView
+    lateinit var tvg:TextView
+    lateinit var tvh:TextView
+    lateinit var tvi:TextView
+    lateinit var tvj:TextView
+    lateinit var tvk:TextView
+    lateinit var tvl:TextView
+    lateinit var tvm:TextView
+    lateinit var tvn:TextView
+    lateinit var tvo:TextView
+    lateinit var tvp:TextView
+    lateinit var tvq:TextView
+    lateinit var tvr:TextView
+    lateinit var tvs:TextView
+    lateinit var tvt:TextView
+    lateinit var tvu:TextView
+    lateinit var tvv:TextView
+    lateinit var tvw:TextView
+    lateinit var tvx:TextView
+    lateinit var tvy:TextView
+    lateinit var tvz:TextView
+    lateinit var tv0:TextView
+    lateinit var tv1:TextView
+    lateinit var tv2:TextView
+    lateinit var tv3:TextView
+    lateinit var tv4:TextView
+    lateinit var tv5:TextView
+    lateinit var tv6:TextView
+    lateinit var tv7:TextView
+    lateinit var tv8:TextView
+    lateinit var tv9:TextView
+    lateinit var tv123:TextView
+    lateinit var tvAlphaSpace:TextView
+    lateinit var tvAlphaDelete:TextView
+    lateinit var tvob:TextView
+    lateinit var tvcb:TextView
+    lateinit var tvunderScor:TextView
+    lateinit var tvPlus:TextView
+    lateinit var tv_o:TextView
+    lateinit var tvdownunder:TextView
+    lateinit var tvExc:TextView
+    lateinit var tvAmp:TextView
+    lateinit var tvHesh:TextView
+    lateinit var tvDoller:TextView
+    lateinit var tvcomma:TextView
+    lateinit var tvdot:TextView
+    lateinit var tvopenBrac:TextView
+    lateinit var tvcloseBrac:TextView
+    lateinit var tvques:TextView
+    lateinit var tvAbc:TextView
+    lateinit var tvnumSpace:TextView
+    lateinit var tvnumDelete:TextView
+    lateinit var tv_at:TextView
+    lateinit var tvop:TextView
+
+
+
     var data: String = ""
     var text_tc: String = ""
     var text_pp: String = ""
@@ -78,12 +147,14 @@ class HomeActivity : FragmentActivity() {
         Regex("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
 
     companion object {
+        var maxLength: Int = 0
         var focus: Int = 0
         var indexOfRow: Int = 0
         var searchRow: Int = 0
         var series_id: String = ""
         var episode_id: String = ""
-        var searchData: String = ""
+        var searchData: String = "no"
+        var lastpos: Boolean = false
         var tempSearchValue: String = ""
         var homeFragment: HomeFragment? = null
         var searchFragment: SearchFragment? = null
@@ -138,12 +209,21 @@ class HomeActivity : FragmentActivity() {
         setContentView(R.layout.activity_home)
         init()
         tvPlay.setOnClickListener {
-            loadPlayButtonData(series_id)
-//            getSubscriptionStatus(episode_id)
-            val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(searchEditText.getWindowToken(), 0);
-//            imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY)
 
+            val connectivityManager = applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
+            if (activeNetwork?.isConnected!=null) {
+                loadPlayButtonData(series_id)
+//                val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//                imm.hideSoftInputFromWindow(searchEditText.getWindowToken(), 0);
+            } else {
+                Toast.makeText(
+                        applicationContext,
+                        "Check your internet connection",
+                        Toast.LENGTH_SHORT
+                ).show()
+                // We have no internet connection.
+            }
         }
 
 
@@ -198,11 +278,18 @@ class HomeActivity : FragmentActivity() {
             movieNotFoundText.visibility = View.GONE
             searchData = "no"
             tempsearchPos="kickFocus"
-            searchEditText.requestFocus()
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+            layoutKeyboard.visibility=View.VISIBLE
+            tva.requestFocus()
+//            searchEditText.requestFocus()
         }
 
 
-
+            searchEditText.setOnClickListener {
+                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+                layoutKeyboard.visibility=View.VISIBLE
+                tva.requestFocus()
+            }
 
         searchEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
@@ -230,6 +317,7 @@ class HomeActivity : FragmentActivity() {
             layout.visibility = View.VISIBLE
             layoutSetting.visibility = View.GONE
             searchLayout.visibility = View.GONE
+            layoutKeyboard.visibility=View.GONE
             searchFragment!!.view!!.visibility = View.GONE
             movieNotFoundText.visibility = View.GONE
             searchData = "no"
@@ -252,6 +340,7 @@ class HomeActivity : FragmentActivity() {
             layoutSetting.visibility = View.VISIBLE
             layout.visibility = View.GONE
             searchLayout.visibility = View.GONE
+            layoutKeyboard.visibility=View.GONE
             searchFragment!!.view!!.visibility = View.GONE
             movieNotFoundText.visibility = View.GONE
             searchData = "no"
@@ -661,16 +750,6 @@ class HomeActivity : FragmentActivity() {
             movieNotFoundText.visibility = View.GONE
             tempSearchValue = ""
         }
-        if (setting.hasFocus() && tempsearchPos=="kickFocus")
-        {
-            searchEditText.requestFocus()
-
-        }
-        else{
-
-        }
-
-
 
     }
 
@@ -686,11 +765,14 @@ class HomeActivity : FragmentActivity() {
         image = sharedPreferences.getString("image", "")!!
         Log.d("cc", "image" + image)
         layout = findViewById(R.id.loginHomeLayout)
+        layoutKeyboard=findViewById(R.id.keyboard_layout)
         logoutDialog = findViewById(R.id.logoutDialog)
         searchLayout = findViewById(R.id.layout_search)
         tcScrollView = findViewById(R.id.tcHomeScroll)
         layoutHometc = findViewById(R.id.layoutHometc)
         tvLogoutConti = findViewById(R.id.tvLogoutConti)
+        layoutApl=findViewById(R.id.layoutAlphabate)
+        layoutNum=findViewById(R.id.layoutNumber)
         movieNotFoundText = findViewById(R.id.movieNotFoundMessage)
         layoutSetting = findViewById(R.id.layoutSetting)
         etEmail = findViewById(R.id.etHomeEmail)
@@ -735,6 +817,136 @@ class HomeActivity : FragmentActivity() {
         tvSignIn = findViewById(R.id.tvSignIn)
         tvProfileName = findViewById(R.id.profileName)
 
+//        KeyBoard
+        tv123=findViewById(R.id.text123)
+        tvAbc=findViewById(R.id.textABC)
+
+        tvAbc.setOnClickListener (this)
+        tv123.setOnClickListener (this)
+        tva=findViewById(R.id.textA)
+        tvb=findViewById(R.id.textB)
+        tvc=findViewById(R.id.textC)
+        tvd=findViewById(R.id.textD)
+        tve=findViewById(R.id.textE)
+        tvf=findViewById(R.id.textF)
+        tvg=findViewById(R.id.textG)
+        tvh=findViewById(R.id.textH)
+        tvi=findViewById(R.id.textI)
+        tvj=findViewById(R.id.textJ)
+        tvk=findViewById(R.id.textK)
+        tvl=findViewById(R.id.textL)
+        tvm=findViewById(R.id.textM)
+        tvn=findViewById(R.id.textN)
+        tvo=findViewById(R.id.textO)
+        tvp=findViewById(R.id.textP)
+        tvq=findViewById(R.id.textQ)
+        tvr=findViewById(R.id.textR)
+        tvs=findViewById(R.id.textS)
+        tvt=findViewById(R.id.textT)
+        tvu=findViewById(R.id.textU)
+        tvv=findViewById(R.id.textV)
+        tvw=findViewById(R.id.textW)
+        tvx=findViewById(R.id.textX)
+        tvy=findViewById(R.id.textY)
+        tvz=findViewById(R.id.textZ)
+        tv0=findViewById(R.id.text0)
+        tv1=findViewById(R.id.text1)
+        tv2=findViewById(R.id.text2)
+        tv3=findViewById(R.id.text3)
+        tv4=findViewById(R.id.text4)
+        tv5=findViewById(R.id.text5)
+        tv6=findViewById(R.id.text6)
+        tv7=findViewById(R.id.text7)
+        tv8=findViewById(R.id.text8)
+        tv9=findViewById(R.id.text9)
+        tvAlphaSpace=findViewById(R.id.textSpace)
+        tvAlphaDelete=findViewById(R.id.textDelet)
+        tvob=findViewById(R.id.textob)
+        tvcb=findViewById(R.id.textcb)
+        tvunderScor=findViewById(R.id.textunserscore)
+        tvPlus=findViewById(R.id.textPlus)
+        tvDoller=findViewById(R.id.textDoller)
+        tv_o=findViewById(R.id.text_O)
+        tvdot=findViewById(R.id.text_dot)
+        tv_at=findViewById(R.id.text_At)
+        tvdownunder=findViewById(R.id.textdownUnder)
+        tvExc=findViewById(R.id.text_Exclamayion)
+        tvAmp=findViewById(R.id.textEmp)
+        tvExc=findViewById(R.id.text_Exclamayion)
+        tvHesh=findViewById(R.id.textHesh)
+        tvcomma=findViewById(R.id.textComma)
+        tvopenBrac=findViewById(R.id.textob)
+        tvcloseBrac=findViewById(R.id.textcloBrac)
+        tvop=findViewById(R.id.textOpBrac)
+        tvques=findViewById(R.id.textQues)
+        tvnumDelete=findViewById(R.id.textNDelet)
+        tvnumSpace=findViewById(R.id.textNSpace)
+
+        tvAbc.setOnClickListener (this)
+        tv123.setOnClickListener (this)
+        tva.setOnClickListener (this)
+        tvb.setOnClickListener (this)
+        tvc.setOnClickListener (this)
+        tvd.setOnClickListener (this)
+        tve.setOnClickListener (this)
+        tvf.setOnClickListener (this)
+        tvg.setOnClickListener (this)
+        tvh.setOnClickListener (this)
+        tvh.setOnClickListener (this)
+        tvi.setOnClickListener (this)
+        tvj.setOnClickListener (this)
+        tvk.setOnClickListener (this)
+        tvl.setOnClickListener (this)
+        tvm.setOnClickListener (this)
+        tvn.setOnClickListener (this)
+        tvo.setOnClickListener (this)
+        tvp.setOnClickListener (this)
+        tvq.setOnClickListener (this)
+        tvr.setOnClickListener (this)
+        tvs.setOnClickListener (this)
+        tvt.setOnClickListener (this)
+        tvu.setOnClickListener (this)
+        tvv.setOnClickListener (this)
+        tvw.setOnClickListener (this)
+        tvx.setOnClickListener (this)
+        tvy.setOnClickListener (this)
+        tvz.setOnClickListener (this)
+        tv0.setOnClickListener (this)
+        tv1.setOnClickListener (this)
+        tv2.setOnClickListener (this)
+        tv3.setOnClickListener (this)
+        tv4.setOnClickListener (this)
+        tv5.setOnClickListener (this)
+        tv6.setOnClickListener (this)
+        tv7.setOnClickListener (this)
+        tv8.setOnClickListener (this)
+        tv9.setOnClickListener (this)
+        tvo.setOnClickListener (this)
+        tva.setOnClickListener (this)
+        tvAlphaSpace.setOnClickListener(this)
+        tvAlphaDelete.setOnClickListener(this)
+        tvob.setOnClickListener(this)
+        tvcb.setOnClickListener(this)
+        tvunderScor.setOnClickListener(this)
+        tvPlus.setOnClickListener(this)
+        tv_o.setOnClickListener(this)
+        tvdownunder.setOnClickListener(this)
+        tvExc.setOnClickListener(this)
+        tvAmp.setOnClickListener(this)
+        tvHesh.setOnClickListener(this)
+        tvDoller.setOnClickListener(this)
+        tvcomma.setOnClickListener(this)
+        tvdot.setOnClickListener(this)
+        tvopenBrac.setOnClickListener(this)
+        tvcloseBrac.setOnClickListener(this)
+        tvques.setOnClickListener(this)
+        tvnumSpace.setOnClickListener(this)
+        tvnumDelete.setOnClickListener(this)
+        tv_at.setOnClickListener(this)
+        tvdot.setOnClickListener(this)
+        tvop.setOnClickListener(this)
+
+
         if (name.isNullOrEmpty()) {
             profile.visibility = View.GONE
             signIn.visibility = View.VISIBLE
@@ -771,7 +983,7 @@ class HomeActivity : FragmentActivity() {
                 if (homeFragment!!.view!!.hasFocus() && indexOfRow == 1) {
                     Log.d("dmdd", "up 11")
                     btnHome.requestFocus()
-                } else if (searchFragment!!.view!!.hasFocus() && searchRow <= 7) {
+                } else if (searchFragment!!.view!!.hasFocus() && searchRow <= 3) {
                     Log.d("dmdd", "up 22")
                     searchEditText.requestFocus()
                 } else if (searchEditText.hasFocus()) {
@@ -788,8 +1000,25 @@ class HomeActivity : FragmentActivity() {
                 super.onKeyDown(keyCode, event)
             }
             KeyEvent.KEYCODE_DPAD_RIGHT -> {
-                super.onKeyDown(keyCode, event)
-
+                Log.d("vv","searchdata "+ searchData)
+                if (tvg.hasFocus() || tvn.hasFocus()||tvu.hasFocus() || tv6.hasFocus()|| tvPlus.hasFocus() || tvDoller.hasFocus() )
+                {
+                    if (searchData.equals("yes")) {
+                        Log.d("vv", "11")
+                        searchFragment!!.view!!.requestFocus()
+                    }
+                    true
+                }
+                else if (searchFragment!!.view!!.hasFocus() && lastpos==true)
+                {
+                    Log.d("vv","33")
+//                    searchFragment!!.view!!.requestFocus()
+                    true
+                }
+                else {
+                    Log.d("vv","22")
+                    super.onKeyDown(keyCode, event)
+                }
             }
             KeyEvent.KEYCODE_DPAD_DOWN -> {
                 if (setting.hasFocus()&& tempsearchPos=="kickFocus")
@@ -811,6 +1040,10 @@ class HomeActivity : FragmentActivity() {
                     homeFragment!!.loadData(id)
                     homeFragment!!.view!!.requestFocus()
                 }
+                else if (layoutKeyboard.visibility==View.VISIBLE)
+                {
+                    super.onKeyDown(keyCode, event)
+                }
                 else if (searchLayout.visibility == View.VISIBLE)
                 {
                     Log.d("dmdd22", "22")
@@ -831,7 +1064,6 @@ class HomeActivity : FragmentActivity() {
                     }
 
                     else{
-//                        true
                         super.onKeyDown(keyCode, event)
                     }
                 } else {
@@ -839,24 +1071,15 @@ class HomeActivity : FragmentActivity() {
                 }
             }
 
-//            KeyEvent.KEYCODE_DPAD_CENTER->
-//            {
-//                Toast.makeText(applicationContext,"done",Toast.LENGTH_SHORT).show()
-//                hideKeyboard()
-//                searchEditText.requestFocus()
-//                super.onKeyDown(keyCode, event)
-//
-//            }
             KeyEvent.KEYCODE_BACK -> {
                 if (searchLayout.visibility == View.VISIBLE) {
                     Log.d("dm", "11")
-//                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-//                    hideKeyboard()
                     searchLayout.visibility = View.GONE
                     searchFragment!!.view!!.visibility = View.GONE
                     movieNotFoundText.visibility = View.GONE
                     searchEditText.text!!.clear()
                     searchData = "no"
+                    layoutKeyboard.visibility=View.GONE
                     btnSearch.requestFocus()
                 } else if (layout.visibility == View.VISIBLE) {
                     Log.d("dm", "44")
@@ -891,8 +1114,6 @@ class HomeActivity : FragmentActivity() {
             else -> super.onKeyDown(keyCode, event)
         }
     }
-
-
 
 
     private fun letsLogin(email: String, pass: String) {
@@ -1038,12 +1259,7 @@ class HomeActivity : FragmentActivity() {
                 Response.Listener { response ->
                     val jsonObject = JSONObject(response)
                     text_tc = jsonObject.getString("text")
-//                    text_pp=jsonObject.getString("privacy")
                     progressBar.visibility = View.GONE
-
-//                    Log.d(TAG,"privacy"+jsonObject.getString("privacy"))
-//                    Log.d(TAG,"terms"+jsonObject.getString("terms"))
-
                 }, Response.ErrorListener {
                     Toast.makeText(
 
@@ -1084,7 +1300,6 @@ class HomeActivity : FragmentActivity() {
 
                 }, Response.ErrorListener {
                     Toast.makeText(
-
                         applicationContext,
                         "Something went wrong.",
                         Toast.LENGTH_SHORT
@@ -1107,13 +1322,292 @@ class HomeActivity : FragmentActivity() {
     }
 
 
-    private fun hideKeyboard() {
-        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(searchEditText.getWindowToken(), 0)
+    override fun onClick(v: View?) {
+        when(v?.id) {
+            R.id.text123 -> {
+                layoutNum.visibility = View.VISIBLE
+                layoutApl.visibility = View.GONE
+                tvAbc.requestFocus()
+            }
+            R.id.textABC->{
+                layoutNum.visibility = View.GONE
+                layoutApl.visibility = View.VISIBLE
+                tv123.requestFocus()
+            }
+            R.id.textA->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "A")
+            }
+            R.id.textB->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "B")
+            }
+            R.id.textB->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "B")
+            }
+
+            R.id.textC->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "C")
+            }
+
+            R.id.textD->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "D")
+            }
+
+            R.id.textE->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "E")
+            }
+
+            R.id.textF->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "F")
+            }
+
+            R.id.textG->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "G")
+            }
+
+            R.id.textH->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "H")
+            }
+
+            R.id.textI->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "I")
+            }
+
+            R.id.textJ->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "J")
+            }
+
+            R.id.textK->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "K")
+            }
+
+            R.id.textL->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "L")
+            }
+
+            R.id.textM->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "M")
+            }
+            R.id.textN->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "N")
+            }
+            R.id.textO->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "O")
+            }
+            R.id.textP->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "P")
+            }R.id.textQ->
+        {
+            searchEditText.setText(searchEditText.getText().toString()+  "Q")
+        }
+
+            R.id.textR->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "R")
+            }
+            R.id.textS->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "S")
+            }
+            R.id.textT->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "T")
+            }
+            R.id.textU->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "U")
+            }
+            R.id.textV->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "V")
+            }
+            R.id.textW->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "W")
+            }
+            R.id.textX->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "X")
+            }
+
+            R.id.textY->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "Y")
+            }
+            R.id.textZ->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "Z")
+            }
+
+            R.id.text0->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "0")
+            }
+            R.id.text1->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "1")
+            }
+            R.id.text2->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "2")
+            }R.id.text3->
+        {
+            searchEditText.setText(searchEditText.getText().toString()+  "3")
+        }R.id.text4->
+        {
+            searchEditText.setText(searchEditText.getText().toString()+  "4")
+        }R.id.text5->
+        {
+            searchEditText.setText(searchEditText.getText().toString()+  "5")
+        }R.id.text6->
+        {
+            searchEditText.setText(searchEditText.getText().toString()+  "6")
+        }R.id.text7->
+        {
+            searchEditText.setText(searchEditText.getText().toString()+  "7")
+        }R.id.text8->
+        {
+            searchEditText.setText(searchEditText.getText().toString()+  "8")
+        }R.id.text9->
+        {
+            searchEditText.setText(searchEditText.getText().toString()+  "9")
+        }
+            R.id.textob->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "(")
+            }
+            R.id.textcb->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  ")")
+            }
+
+            R.id.textunserscore->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "-")
+            }
+
+            R.id.text_O->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "O")
+            }
+            R.id.textdownUnder->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "_")
+            }
+            R.id.text_Exclamayion->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "!")
+            }
+            R.id.textEmp->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "&")
+            }
+            R.id.textHesh->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "#")
+            }
+
+            R.id.textPlus->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "+")
+            }
+            R.id.textDoller->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "$")
+            }
+            R.id.textComma->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  ",")
+            }
+            R.id.textOpBrac->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "{")
+            }
+            R.id.textcloBrac->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "}")
+            }
+            R.id.textQues->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "?")
+            }
+
+            R.id.textNSpace->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  " ")
+            }
+
+            R.id.textSpace->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  " ")
+            }
+
+            R.id.textDelet->
+            {
+//                editText.setText(editText.getText().toString()+  " ")
+                var deletedString = removeLastChar(searchEditText.text.toString());
+                if(deletedString?.length!= 0)
+                {
+                    searchEditText.setText(deletedString)
+                    searchFragment!!.loadData(searchEditText.text.toString())
+                }else{
+                    searchEditText.setText("")
+                    searchFragment!!.clearAdapter()
+                    searchFragment!!.loadData(searchEditText.text.toString())
+                    tvAlphaDelete.requestFocus()
+                }
+
+
+            }
+
+            R.id.textNDelet->
+            {
+//                editText.setText(editText.getText().toString()+  " ")
+
+                var deletedString = removeLastChar(searchEditText.text.toString());
+                if(deletedString?.length!= 0)
+                {
+                    searchEditText.setText(deletedString)
+                    searchFragment!!.loadData(searchEditText.text.toString())
+                }else{
+                    searchEditText.setText("")
+                    searchFragment!!.clearAdapter()
+                    searchFragment!!.loadData(searchEditText.text.toString())
+                    tvnumDelete.requestFocus()
+                }
+            }
+            R.id.text_At->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  "@")
+            }
+            R.id.text_dot->
+            {
+                searchEditText.setText(searchEditText.getText().toString()+  ".")
+            }
+
+
+        }
     }
-
-
-
-
+    fun removeLastChar(s: String?): String? {
+        return if (s == null || s.length == 0) {
+            s
+        } else s.substring(0, s.length - 1)
+    }
 
 }

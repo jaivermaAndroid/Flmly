@@ -3,7 +3,15 @@ package com.flmly.tv.model;
 public class SearchModel
 {
     String thumb,title,series_id,episode_id;
-    int row;
+    int row,len;
+
+    public int getLen() {
+        return len;
+    }
+
+    public void setLen(int len) {
+        this.len = len;
+    }
 
     public int getRow() {
         return row;

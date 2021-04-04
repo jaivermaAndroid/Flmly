@@ -23,11 +23,11 @@ public class CategoryPresenter extends Presenter {
     @Override
     public CategoryPresenter.ViewHolder onCreateViewHolder(ViewGroup viewGroup) {
         mDefaultBackgroundColor = ContextCompat.getColor(viewGroup.getContext(), R.color.transparent);
-        mSelectedBackgroundColor = ContextCompat.getColor(viewGroup.getContext(), R.color.transparent);
+        mSelectedBackgroundColor = ContextCompat.getColor(viewGroup.getContext(), R.color.white);
         CustomCardView cardView = new CustomCardView(viewGroup.getContext()) {
             @Override
             public void setSelected(boolean selected) {
-
+                updateCardBackgroundColor(this, selected);
                 super.setSelected(selected);
             }
         };
@@ -35,6 +35,7 @@ public class CategoryPresenter extends Presenter {
         cardView.setFocusable(true);
         cardView.setCardType(BaseCardView.CARD_TYPE_MAIN_ONLY);
         cardView.setFocusableInTouchMode(true);
+        cardView.setPadding(0,8,8,8);
         updateCardBackgroundColor(cardView, false);
         return new CategoryPresenter.ViewHolder(cardView);
 

@@ -164,7 +164,7 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/open_sans_italic"
         android:textAllCaps="true"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:gravity="start|center"
         android:textColor="@color/white"
         android:layout_width="wrap_content"

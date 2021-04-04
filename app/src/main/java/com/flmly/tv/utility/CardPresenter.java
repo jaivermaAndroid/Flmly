@@ -13,6 +13,7 @@ import com.flmly.tv.R;
 
 
 import static android.widget.ImageView.ScaleType.CENTER_CROP;
+import static android.widget.ImageView.ScaleType.FIT_XY;
 
 public class CardPresenter extends Presenter
 {
@@ -25,11 +26,11 @@ public class CardPresenter extends Presenter
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup)
     {
         mDefaultBackgroundColor = ContextCompat.getColor(viewGroup.getContext(), R.color.transparent);
-        mSelectedBackgroundColor = ContextCompat.getColor(viewGroup.getContext(), R.color.transparent);
+        mSelectedBackgroundColor = ContextCompat.getColor(viewGroup.getContext(), R.color.white);
         CustomCardView cardView = new CustomCardView(viewGroup.getContext()) {
             @Override
             public void setSelected(boolean selected) {
-
+                updateCardBackgroundColor(this, selected);
                 super.setSelected(selected);
             }
         };
@@ -37,7 +38,13 @@ public class CardPresenter extends Presenter
         cardView.setFocusable(true);
         cardView.setCardType(BaseCardView.CARD_TYPE_MAIN_ONLY);
         cardView.setFocusableInTouchMode(true);
+//        cardView.setBackgroundColor(viewGroup.getResources().getColor(R.color.white));
+        cardView.setPadding(0,8,8,8);
+//        imageCardView.setInfoVisibility(BaseCardView.CARD_REGION_VISIBLE_ALWAYS);
+//        updateCardBackgroundColor(imageCardView,true);
+//        imageCardView.setFocusableInTouchMode(true);
         updateCardBackgroundColor(cardView, false);
+
         return new ViewHolder(cardView);
 
 
@@ -56,11 +63,7 @@ public class CardPresenter extends Presenter
 //        imageCardView.setVisibility(View.VISIBLE);
 //        imageCardView.setFocusable(true);
 //        imageCardView.setExtraVisibility(View.VISIBLE);
-//        imageCardView.setBackgroundColor(viewGroup.getResources().getColor(R.color.red));
-//        imageCardView.setPadding(5,5,5,5);
-//        imageCardView.setInfoVisibility(BaseCardView.CARD_REGION_VISIBLE_ALWAYS);
-//        updateCardBackgroundColor(imageCardView,true);
-//        imageCardView.setFocusableInTouchMode(true);
+//
 //        return new ViewHolder(imageCardView);
     }
 

@@ -1,12 +1,15 @@
 package com.flmly.tv.activity
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.drawable.LayerDrawable
-import android.net.Uri
-import android.nfc.Tag
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
+import android.net.NetworkInfo
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -23,21 +26,11 @@ import com.android.volley.VolleyLog
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.bumptech.glide.Glide
-import com.flmly.tv.model.DetailsModel
 import com.flmly.tv.R
 import com.flmly.tv.VolleySingleton
-import com.flmly.tv.model.LoginModel
+import com.flmly.tv.model.DetailsModel
 import com.flmly.tv.utility.Api
-import com.google.android.exoplayer2.*
-import com.google.android.exoplayer2.source.MediaSource
-import com.google.android.exoplayer2.source.ProgressiveMediaSource
-import com.google.android.exoplayer2.source.dash.DashMediaSource
-import com.google.android.exoplayer2.source.hls.HlsMediaSource
-import com.google.android.exoplayer2.source.smoothstreaming.SsMediaSource
 import com.google.android.exoplayer2.ui.PlayerView
-import com.google.android.exoplayer2.upstream.DataSource
-import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory
-import com.google.android.exoplayer2.util.Util
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.UnsupportedEncodingException
@@ -168,7 +161,22 @@ class DetailsActivity : Activity() {
         }
 
         tvdetailsPlay.setOnClickListener {
-            getSubscriptionStatus(episode_id)
+
+            val connectivityManager = applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
+            if (activeNetwork?.isConnected!=null) {
+                    // do your stuff. We have internet.
+                    getSubscriptionStatus(episode_id)
+                } else {
+                    Toast.makeText(
+                            applicationContext,
+                            "Check your internet connection",
+                            Toast.LENGTH_SHORT
+                    ).show()
+                    // We have no internet connection.
+                }
+//
+//            getSubscriptionStatus(episode_id)
             Log.e("dd", "episode id" + episode_id)
         }
 
@@ -198,9 +206,7 @@ class DetailsActivity : Activity() {
                         contentModel.duration = jsonObjectEpisode.getString("duration")
                         tvDetailsDuration.text =
                             "\u2022 " + (jsonObjectEpisode.getInt("duration") / 60).toInt() + "m"
-                        contentModel.view_count = jsonObjectEpisode.getString("view_count")
-                        contentModel.status = jsonObjectEpisode.getString("status")
-                        contentModel.status = jsonObjectEpisode.getString("status")
+
 
                         Log.d("token", "auth tokn " + HomeActivity.auth+"status "+ jsonObjectEpisode.getString("status"))
                         if (jsonObjectEpisode.getString("status").equals("PUBLISHED") ) {
@@ -226,21 +232,6 @@ class DetailsActivity : Activity() {
 
                             tvdetailsPlay.visibility = View.GONE
                         }
-                        contentModel.reprocess_status =
-                            jsonObjectEpisode.getString("reprocess_status")
-                        contentModel.processing_file =
-                            jsonObjectEpisode.getString("processing_file")
-                        contentModel.series_type = jsonObjectEpisode.getString("series_type")
-                        contentModel.file = jsonObjectEpisode.getString("file")
-                        contentModel.thumb = jsonObjectEpisode.getString("thumb")
-                        contentModel.is_archived = jsonObjectEpisode.getString("is_archived")
-                        contentModel.is_featured = jsonObjectEpisode.getString("is_featured")
-                        contentModel.title = jsonObjectEpisode.getString("title")
-                        contentModel.description = jsonObjectEpisode.getString("description")
-                        contentModel.episode_number =
-                            jsonObjectEpisode.getString("episode_number")
-                        contentModel.series_id = jsonObjectEpisode.getString("series_id")
-                        contentModel.published_at = jsonObjectEpisode.getString("published_at")
                         if (jsonObjectEpisode.has("s3_tv_file")) {
                             contentModel.s3_file = jsonObjectEpisode.getString("s3_tv_file")
                             videoUrl = Api.baseUrl2 + jsonObjectEpisode.getString("s3_tv_file")
@@ -251,11 +242,7 @@ class DetailsActivity : Activity() {
                         if (jsonObjectEpisode.has("featured_times")) {
                             val jsonObjectfeatured_times =
                                 jsonObjectEpisode.getJSONObject("featured_times")
-                            contentModel.end_time =
-                                jsonObjectfeatured_times.getString("end_time")
-                            contentModel.fea_file = jsonObjectfeatured_times.getString("file")
-                            contentModel.start_time =
-                                jsonObjectfeatured_times.getString("start_time")
+
                         }
                         contentModel.sub_status = jsonObjectEpisode.getString("sub_status")
                         if (jsonObjectEpisode.has("portrait_thumb")) {
@@ -289,25 +276,27 @@ class DetailsActivity : Activity() {
                                 promoUrl =
                                     Api.baseUrl2 + jsonObjectEpisode.getString("promo_file")
                                 tvtrailer.visibility = View.VISIBLE
-                                tvtrailer.requestFocus()
+                                if (tvdetailsPlay.visibility==View.VISIBLE)
+                                {
+                                    tvdetailsPlay.requestFocus()
+                                }
+                                else {
+                                    tvtrailer.requestFocus()
+                                }
                             }
                         } else {
                             tvtrailer.visibility = View.GONE
                             Log.d("zzz", "Trailer check else")
                         }
-                        contentModel.is_audition = jsonObjectEpisode.getString("is_audition")
+
                         contentModel.publish_year = jsonObjectEpisode.getString("publish_year")
                         tvYear.text = "\u2022 " + jsonObjectEpisode.getString("publish_year")
-                        contentModel.episode_id = jsonObjectEpisode.getString("episode_id")
                         Log.d("zzz","episode id details"+jsonObjectEpisode.getString("episode_id"))
                         episode_id = jsonObjectEpisode.getString("episode_id")
                         contentModel.my_rating = jsonObjectEpisode.getString("my_rating")
                         rate = jsonObjectEpisode.getInt("my_rating")
 
                         Log.d("cc","Episode_myRatting:  "+jsonObjectEpisode.getDouble("my_rating"))
-
-                        contentModel.thumb_size_1 = jsonObjectEpisode.getString("thumb_size_1")
-                        contentModel.thumb_size_3 = jsonObjectEpisode.getString("thumb_size_3")
                         val jsonObjectepisode_credits_info =
                             jsonObjectEpisode.getJSONObject("episode_credits_info")
                         val jsonArrayactors =
@@ -315,8 +304,6 @@ class DetailsActivity : Activity() {
                         if (jsonArrayactors.length() >= 3) {
                             for (j in 0 until 2) {
                                 val jsonObjectActors = jsonArrayactors.getJSONObject(j)
-                                contentModel.value = jsonObjectActors.getString("value")
-                                contentModel.label = jsonObjectActors.getString("label")
                                 for (s in Arrays.asList(
                                     jsonObjectActors.getString("value")
                                 )) {
@@ -332,8 +319,6 @@ class DetailsActivity : Activity() {
                         } else {
                             for (j in 0 until jsonArrayactors.length()) {
                                 val jsonObjectActors = jsonArrayactors.getJSONObject(j)
-                                contentModel.value = jsonObjectActors.getString("value")
-                                contentModel.label = jsonObjectActors.getString("label")
                                 for (s in Arrays.asList(
                                     jsonObjectActors.getString("value")
                                 )) {
@@ -348,16 +333,12 @@ class DetailsActivity : Activity() {
 
                         }
                         tvCast.text = "Cast: " + itemList
-                        contentModel.user_fname = js2.getString("user_fname")
-                        contentModel.user_lname = js2.getString("user_lname")
                         tvDetailsheading.text =
                             "By the " + js2.getString("user_lname") + " family"
                         contentModel.user_thumb = js2.getString("user_thumb")
                         contentModel.user_age = js2.getString("user_age")
 
-                        contentModel.director_name = js2.getString("director_name")
                         tvDetailsDirectorName.text = js2.getString("director_name")
-                        contentModel.director_thumb = js2.getString("director_thumb")
                         Glide.with(applicationContext)
                             .load(Api.baseUrl2 + "/uploads" + js2.getString("director_thumb"))
                             .into(directerImage)
@@ -423,14 +404,9 @@ class DetailsActivity : Activity() {
 
 
 //                                feedbackRatting.rating=js2.getDouble("rating").toFloat()
-                        contentModel.status_2 = js2.getString("status")
-                        contentModel.is_featured = js2.getString("status")
-                        contentModel.is_archived = js2.getString("status")
-                        contentModel.type = js2.getString("type")
-                        contentModel.title = js2.getString("title")
+
                         tvDetailsTitle.text = js2.getString("title")
-                        contentModel.synopsis = js2.getString("synopsis")
-                        tvdetailsDesc.text = js2.getString("synopsis")
+                       tvdetailsDesc.text = js2.getString("synopsis")
                         contentModel.genre = js2.getString("genre")
                         tvdetailsGen.text = js2.getString("genre")
 //                                contentModel.child_user_id=js2.getString("child_user_id")
@@ -461,11 +437,7 @@ class DetailsActivity : Activity() {
                         val jsonArrayusers = js2.getJSONArray("users")
                         for (j in 0 until jsonArrayusers.length()) {
                             val jsonObjectuser = jsonArrayusers.getJSONObject(j)
-                            contentModel._id = jsonObjectuser.getString("_id")
-                            contentModel.birth_year = jsonObjectuser.getString("birth_year")
-                            contentModel.birth_month = jsonObjectuser.getString("birth_month")
-                            contentModel.f_name = jsonObjectuser.getString("f_name")
-                            contentModel.l_name = jsonObjectuser.getString("l_name")
+
                         }
 
                         if (js2.has("is_tutorial_badge_earned")) {
@@ -726,8 +698,11 @@ class DetailsActivity : Activity() {
                 progressBar.visibility = View.GONE
                 rettingLayout.visibility = View.GONE
                 tvrate.requestFocus()
-//            Toast.makeText(applicationContext, "username or password was entered incorrectly", Toast.LENGTH_SHORT).show()
-//            progressBar.visibility = View.GONE
+                Toast.makeText(
+                        applicationContext,
+                        "Check your internet connection",
+                        Toast.LENGTH_SHORT
+                ).show()
 
             }) {
             override fun getBodyContentType(): String {

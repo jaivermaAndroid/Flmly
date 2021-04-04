@@ -1,6 +1,9 @@
  package com.flmly.tv.fragment
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -170,7 +173,18 @@ import org.json.JSONObject
                             Glide.with(it).load("https://www.flmly.com/" + content.getTv_thumb())
                                     .into(HomeActivity.imageBanner)
                         }
+                    val connectivityManager = activity!!.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+                    val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
+                    if (activeNetwork?.isConnected!=null) {
                         loadData(content.series_id)
+                    }
+                    else{
+                        Toast.makeText(
+                                activity,
+                                "Check your internet connection",
+                                Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
             }
         }
@@ -179,23 +193,38 @@ import org.json.JSONObject
                 if (item is HomeModel) {
                     val content = item
                     Log.d("cc","data"+content)
-                    val intent= Intent(activity, DetailsActivity::class.java)
-                    intent.putExtra("directerName",direct)
-                    intent.putExtra("title",content.title)
-                    intent.putExtra("banner","https://www.flmly.com/" + content.getTv_thumb())
-                    intent.putExtra("header",header)
-                    intent.putExtra("series_id",content.series_id)
-                    Log.d("zz","series id"+content.series_id)
-                    intent.putExtra("directerImage",directThumb)
-                    intent.putExtra("duration",duration)
-                    intent.putExtra("description",content.synopsis)
-                    intent.putExtra("gen",content.genre)
-                    intent.putExtra("year",content.published_at)
-                    intent.putExtra("starRetting",starRetting)
-                    intent.putExtra("rating",rating)
-                    intent.putExtra("cast","")
-                    HomeActivity.focus=1
-                    startActivity(intent)
+
+
+                    val connectivityManager = activity!!.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+                    val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
+                    if (activeNetwork?.isConnected!=null) {
+                        // do your stuff. We have internet.
+                        val intent= Intent(activity, DetailsActivity::class.java)
+                        intent.putExtra("directerName",direct)
+                        intent.putExtra("title",content.title)
+                        intent.putExtra("banner","https://www.flmly.com/" + content.getTv_thumb())
+                        intent.putExtra("header",header)
+                        intent.putExtra("series_id",content.series_id)
+                        Log.d("zz","series id"+content.series_id)
+                        intent.putExtra("directerImage",directThumb)
+                        intent.putExtra("duration",duration)
+                        intent.putExtra("description",content.synopsis)
+                        intent.putExtra("gen",content.genre)
+                        intent.putExtra("year",content.published_at)
+                        intent.putExtra("starRetting",starRetting)
+                        intent.putExtra("rating",rating)
+                        intent.putExtra("cast","")
+                        HomeActivity.focus=1
+                        startActivity(intent)
+
+                    } else {
+                        Toast.makeText(
+                                activity,
+                                "Check your internet connection",
+                                Toast.LENGTH_SHORT
+                        ).show()
+                        // We have no internet connection.
+                    }
 
                 }
             }
@@ -324,8 +353,8 @@ import org.json.JSONObject
                                 HomeActivity.tvDirectAge.text =""
                             }
 
-                            HomeActivity.tvDur.text= "\u2022"+(js2.getInt("duration")/ 60).toInt()+"m"
-                            duration="\u2022"+(js2.getInt("duration")/ 60).toInt()+"m"
+                            HomeActivity.tvDur.text= "\u2022"+" "+(js2.getInt("duration")/ 60).toInt()+"m"
+                            duration="\u2022"+" "+(js2.getInt("duration")/ 60).toInt()+"m"
 
                             HomeActivity.progressBar.visibility=View.GONE
                         }

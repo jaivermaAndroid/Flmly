@@ -44,7 +44,7 @@ public class CustomCardView extends BaseCardView {
         mImageView=(ImageView)findViewById(R.id.main_image);
 //        thumb=(ImageView)findViewById(R.id.thumb);
 //        mImageView=(ImageView)findViewById(R.id.main_image);
-        goldbadge=findViewById(R.id.goldbadge);
+//        goldbadge=findViewById(R.id.goldbadge);
 //        desc=findViewById(R.id.tvDescription);
 //        title=findViewById(R.id.tvTitle);
 //        durat

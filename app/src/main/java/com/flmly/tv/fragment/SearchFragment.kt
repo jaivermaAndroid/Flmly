@@ -20,10 +20,9 @@ import org.json.JSONObject
 
 class SearchFragment : VerticalGridSupportFragment() {
     var row: Int = 0
-    private val NUM_COLUMNS = 8
+    private val NUM_COLUMNS = 4
     var mCategoryRowAdapter = ArrayObjectAdapter(CategoryPresenter())
     private var cardPresenter_Header: HeaderItem? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +37,9 @@ class SearchFragment : VerticalGridSupportFragment() {
         setUpEvents()
 //        loadData()
     }
-
+    fun clearAdapter() {
+        mCategoryRowAdapter.clear()
+    }
     fun loadData(searchText: String) {
         try {
             mCategoryRowAdapter.clear()
@@ -48,6 +49,7 @@ class SearchFragment : VerticalGridSupportFragment() {
                 Response.Listener { response ->
                     Log.e("TAG Search", "$response")
                     row++
+                    mCategoryRowAdapter.clear()
                     val jsonObject = JSONObject(response)
                     val jsonArray = jsonObject.getJSONArray("data")
                     if (jsonArray.length() > 0) {
@@ -55,7 +57,9 @@ class SearchFragment : VerticalGridSupportFragment() {
                             val jsonObject1 = jsonArray.getJSONObject(i)
                             cardPresenter_Header = HeaderItem("")
                             val searchModel = SearchModel()
+                            HomeActivity.maxLength=jsonArray.length()
                             searchModel.row=i
+                            searchModel.len=jsonArray.length()
                             searchModel.thumb = jsonObject1.getString("thumb")
                             searchModel.title = jsonObject1.getString("title")
                             searchModel.series_id = jsonObject1.getString("series_id")
@@ -76,7 +80,7 @@ class SearchFragment : VerticalGridSupportFragment() {
 //                            Toast.LENGTH_SHORT
 //                        ).show()
                         HomeActivity.progressBar.visibility = View.GONE
-                        HomeActivity.searchEditText.requestFocus()
+//                        HomeActivity.searchEditText.requestFocus()
                         HomeActivity.searchFragment?.view?.visibility =View.GONE
                         HomeActivity.searchData="no"
                         HomeActivity.movieNotFoundText.visibility=View.VISIBLE
@@ -113,6 +117,11 @@ class SearchFragment : VerticalGridSupportFragment() {
             if (item is SearchModel) {
                 //                val content = item
                 HomeActivity.searchRow  = item.row
+                if (item.row==HomeActivity.maxLength)
+                {
+                    HomeActivity.lastpos=true
+
+                }
 
                 Log.d("zz","row"+item.row)
             }
