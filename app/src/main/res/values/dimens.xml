@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lb_browse_expanded_row_no_hovercard_bottom_padding">4dp</dimen>
+    <dimen name="lb_browse_expanded_selected_row_top_padding">10dp</dimen>
+    <dimen name="lb_browse_selected_row_top_padding">8dp</dimen>
+    <dimen name="lb_browse_rows_margin_start">5dp</dimen>
+    <!--    <dimen name="lb_rounded_rect_corner_radius">10dp</dimen>-->
+    <dimen name="twelv_sp">8sp</dimen>
+    <dimen name="twenty_dp">8dp</dimen>
+    <dimen name="lb_browse_item_horizontal_spacing">2dp</dimen>
+    <dimen name="lb_browse_item_vertical_spacing">8dp</dimen>
+    <dimen name="lb_browse_rows_margin_top">10dp</dimen>
+
+    <!--    <dimen name="lb_browse_expanded_row_no_hovercard_bottom_padding">8dp</dimen>-->
+    <!--    <dimen name="lb_browse_expanded_selected_row_top_padding">8dp</dimen>-->
+    <dimen name="lb_material_shadow_focused_z">0dp</dimen>
+
+    <!--    <dimen name="side_panel_width">360dp</dimen>-->
+    <!--    <dimen name="side_panel_padding_start">32dp</dimen>-->
+    <!--    <dimen name="side_panel_padding_end">56dp</dimen>-->
+    <!--    <dimen name="side_panel_elevation">8dp</dimen>-->
+    <!--    <dimen name="side_panel_header_height">87dp</dimen>-->
+    <!--    <dimen name="side_panel_header_padding_top">27dp</dimen>-->
+    <!--    <dimen name="side_panel_header_elevation">4dp</dimen>-->
+    <!--    <dimen name="side_panel_header_text_size">24sp</dimen>-->
+    <!--    <dimen name="side_panel_item_text_size">16sp</dimen>-->
+    <!--    <dimen name="side_panel_item_padding_top">11dp</dimen>-->
+    <!--    <dimen name="side_panel_item_padding_bottom">12.5dp</dimen>-->
+    <!--    <dimen name="add_remove_margin">20dp</dimen>-->
+
+
+
+    <!--    <dimen name="activity_horizontal_margin">64dp</dimen>-->
+    <!--    <dimen name="vertical_overscan_safe_margin">27dp</dimen>-->
+    <!--    <dimen name="horizontal_overscan_safe_margin">48dp</dimen>-->
+
+    <!--    <dimen name="menu_margin_top">-32dp</dimen>-->
+    <!--    <dimen name="menu_margin_bottom_min">27dp</dimen>-->
+    <!--    <dimen name="menu_row_align_from_bottom">124dp</dimen>-->
+    <!--    <dimen name="menu_row_title_width">300dp</dimen>-->
+    <!--    <dimen name="menu_row_title_height">48dp</dimen>-->
+    <!--    <dimen name="menu_row_title_transform_pivot_x">0dp</dimen>-->
+    <!--    <dimen name="menu_padding_start">56dp</dimen>-->
+    <!--    <dimen name="menu_padding_end">56dp</dimen>-->
+
+
+    <!--    <dimen name="menu_row_contents_padding_top">11.5dp</dimen>-->
+    <!--    <dimen name="menu_row_contents_padding_bottom_max">48dp</dimen>-->
+    <!--    <dimen name="menu_list_margin_top">-1.5dp</dimen>-->
+
+
+
+    <!--    <dimen name="lb_browse_rows_margin_top">30dp</dimen>-->
+    <!--    <dimen name="lb_browse_expanded_selected_row_top_padding">16dp</dimen>-->
+    <!--    <dimen name="lb_browse_expanded_row_no_hovercard_bottom_padding">28dp</dimen>-->
+    <!--    <dimen name="lb_browse_item_vertical_spacing">10dp</dimen>-->
+    <!--    <dimen name="fab_margin">16dp</dimen>-->
+
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+</resources>

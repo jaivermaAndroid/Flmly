@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    tools:context=".activity.HomeActivity">
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/img_banner"
+        android:scaleType="fitXY"
+        android:layout_width="580dp"
+        android:paddingBottom="10dp"
+        android:layout_height="350dp"/>
+
+    <ImageView
+        android:id="@+id/imgOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ovrly"
+        android:scaleType="fitXY"
+        android:layout_width="585dp"
+        android:layout_height="350dp"/>
+
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:layout_marginEnd="19dp"
+        android:id="@+id/directImg"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        />
+
+    <ImageView
+        android:layout_width="40px"
+        android:layout_height="48px"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:layout_marginStart="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:layout_marginEnd="14dp"
+        android:src="@drawable/smallbadge"
+        android:id="@+id/imgbadge"
+        app:layout_constraintBottom_toTopOf="@+id/tvheading"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        />
+
+    <ImageView
+        android:layout_width="72px"
+        android:layout_height="50px"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:layout_marginStart="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/smallcertificate"
+        android:id="@+id/smallCerti"
+        app:layout_constraintBottom_toTopOf="@+id/tvheading"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/directImg"
+        android:layout_marginEnd="19dp"
+        android:id="@+id/tvDirector"
+        android:textSize="10sp"
+        android:text="Director"
+        android:layout_marginTop="3dp"
+        android:gravity="start"
+        android:fontFamily="@font/myriadpro_bold"
+        android:textColor="@color/white"
+        android:layout_width="70dp"
+        android:layout_height="15dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvDirector"
+        android:layout_marginEnd="19dp"
+        android:id="@+id/tvDirectName"
+        android:gravity="fill"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="2"
+        android:textSize="10sp"
+        android:fontFamily="@font/myriadpro_bold"
+        android:textColor="@color/white"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvDirectName"
+        android:layout_marginEnd="19dp"
+        android:id="@+id/tvDirectAge"
+        android:textSize="9sp"
+        android:fontFamily="@font/myriad_pro_regular"
+        android:textColor="@color/white"
+        android:layout_width="70dp"
+        android:layout_height="15dp"/>
+
+
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/flmly_logo"
+        android:scaleType="fitXY"
+        android:layout_width="170px"
+        android:layout_height="58px"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        app:layout_constraintStart_toEndOf="@+id/img_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvTitle"
+        android:textSize="45px"
+        android:fontFamily="@font/opensans_bold"
+        android:layout_marginTop="29dp"
+        android:gravity="start"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toEndOf="@+id/img_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvheading"
+        android:gravity="start"
+        android:textSize="15sp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/myriadpro_bold"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/default_text_color"
+        android:layout_width="0dp"
+        android:layout_height="20dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toBottomOf="@+id/tvheading"
+        app:layout_constraintStart_toEndOf="@+id/img_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvDesc"
+        android:fontFamily="@font/opensans_regular"
+        android:maxLines="5"
+        android:textSize="26px"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+        app:layout_constraintStart_toEndOf="@+id/img_banner"
+        android:id="@+id/tvGen"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/open_sans_italic"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        android:gravity="start|center"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+        app:layout_constraintStart_toEndOf="@+id/tvGen"
+        android:id="@+id/tvDuration"
+        android:gravity="start|center"
+        android:fontFamily="@font/open_sans_italic"
+        android:maxLines="1"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutRating"
+        app:layout_constraintStart_toEndOf="@+id/tvDuration"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginEnd="4dp"
+            android:id="@+id/tvretting"
+            android:textColor="@color/white"
+            android:fontFamily="@font/myriadpro_bold"
+            android:textSize="18sp"
+            android:maxLength="3"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:layout_width="wrap_content"
+            android:maxLines="1"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rettingBar"
+            android:background="@color/transparent"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:theme="@style/RatingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPlay"
+        app:layout_constraintStart_toEndOf="@+id/img_banner"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRating"
+        android:background="@drawable/play_selecter"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="75dp"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:id="@+id/tvMoreInfo"
+        app:layout_constraintStart_toEndOf="@+id/tvPlay"
+        android:layout_marginStart="30dp"
+        android:clickable="true"
+        android:layout_marginTop="9dp"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRating"
+        android:background="@drawable/more_selecter"
+        android:layout_width="75dp"
+        android:layout_height="30dp"/>
+
+    <!--    <LinearLayout-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:layout_marginTop="280dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <fragment
+        android:layout_marginTop="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:name="com.flmly.tv.fragment.HomeFragment"
+        android:id="@+id/homeFragment"
+        tools:context=".activity.HomeActivity"
+        tools:deviceIds="tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <!--    Search layout-->
+
+
+
+
+
+    <!--    </LinearLayout>-->
+
+
+
+    <ImageView
+        android:id="@+id/imageShado"
+        android:src="@drawable/home_bg"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <!--Login layout-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/loginHomeLayout"
+        android:visibility="gone"
+        android:background="@color/blueTransparent2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp"
+            android:id="@+id/img_login_Logo"
+            android:src="@drawable/flmly_logo"
+            android:layout_width="182dp"
+            android:layout_height="70dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_login_Logo"
+            android:text="Log in with your email and password"
+            android:textColor="@color/white"
+            android:fontFamily="@font/myriadpro_bold"
+            android:id="@+id/tvLoginHomeText"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/layout1"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoginHomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etHomeEmail"
+                android:hint="Email"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="textEmailAddress"
+                android:nextFocusRight="@id/etHomePass"
+                android:nextFocusLeft="@id/etHomeEmail"
+                android:nextFocusUp="@id/etHomeEmail"
+                android:nextFocusDown="@id/tvHomeContinue"
+                android:imeOptions="actionNext"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="5dp"
+                android:fontFamily="@font/myriad_pro_bold_semiextended"
+                android:background="@drawable/edit_text_selecter"
+                android:textColorHint="@color/white"
+                android:gravity="start|center"
+                android:layout_width="195dp"
+                android:layout_height="32dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etHomePass"
+                android:hint="Password"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="textPassword"
+                android:paddingStart="5dp"
+                android:nextFocusRight="@id/etHomePass"
+                android:nextFocusUp="@id/etHomePass"
+                android:nextFocusLeft="@id/etHomeEmail"
+                android:nextFocusDown="@id/tvHomeContinue"
+                android:layout_marginStart="8dp"
+                android:imeOptions="normal"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/myriad_pro_bold_semiextended"
+                android:background="@drawable/edit_text_selecter"
+                android:textColorHint="@color/white"
+                android:gravity="start|center"
+                android:layout_width="195dp"
+                android:layout_height="32dp"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvHomeContinue"
+            android:layout_width="195dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="277dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/continue_selecter"
+            android:nextFocusUp="@id/etHomePass"
+            android:nextFocusDown="@id/tvHomeContinue"
+            android:nextFocusLeft="@id/tvHomeContinue"
+            android:nextFocusRight="@id/tvHomeContinue"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- setting layout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/layoutSetting"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/logobackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+        <!--        <ImageView-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            android:src="@drawable/back_arrow"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:layout_marginStart="60px"-->
+        <!--            android:layout_width="25dp"-->
+        <!--            android:layout_height="20dp"/>-->
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="200dp"
+            android:layout_height="100dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="4dp"
+                android:gravity="bottom|center"
+                android:id="@+id/textHomeTc"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:text="Terms of service"
+                android:textSize="25px"
+                android:nextFocusDown="@id/textHomepp"
+                android:nextFocusLeft="@id/textHomeTc"
+                android:nextFocusRight="@id/textHomeTc"
+                android:nextFocusUp="@id/textHomeTc"
+                android:focusable="true"
+                android:clickable="true"
+                android:textColor="@color/white"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:layout_width="120dp"
+                android:layout_height="22dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="4dp"
+                android:gravity="bottom|center"
+                android:id="@+id/textHomepp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="Privacy Policy"
+                android:textSize="25px"
+                android:nextFocusDown="@id/textLogout"
+                android:nextFocusLeft="@id/textHomepp"
+                android:nextFocusRight="@id/textHomepp"
+                android:nextFocusUp="@id/textHomeTc"
+                android:focusable="true"
+                android:clickable="true"
+                android:textColor="@color/white"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:layout_width="120dp"
+                android:layout_height="22dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                android:id="@+id/textLogout"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="Logout"
+                android:focusable="true"
+                android:clickable="true"
+                android:nextFocusDown="@id/textLogout"
+                android:nextFocusLeft="@id/textLogout"
+                android:nextFocusRight="@id/textLogout"
+                android:nextFocusUp="@id/textHomepp"
+                android:textSize="25px"
+                android:textColor="@color/white"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="4dp"
+                android:layout_gravity="start"
+                android:text="Contact Us"
+                android:textSize="27px"
+                android:padding="2dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/opensans_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="4dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="2dp"
+                android:padding="2dp"
+                android:text="email us at: support@flmly.com"
+                android:textSize="25px"
+                android:textColor="@color/white"
+                android:fontFamily="@font/myriadpro_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/layout_search"
+        android:visibility="gone"
+        android:background="@drawable/logobackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:paddingStart="5dp"
+            android:hint="Search for movie by title,director or actor"
+            android:maxLines="1"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:clickable="true"
+            android:singleLine="true"
+            android:nextFocusLeft="@id/editTextSearch"
+            android:nextFocusRight="@id/editTextSearch"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/myriad_pro_bold_semiextended"
+            android:background="@drawable/search_edit_text_selecter"
+            android:textColorHint="@color/white"
+            android:gravity="start|center"
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <fragment
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSearch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:name="com.flmly.tv.fragment.SearchFragment"
+            android:id="@+id/searchFragment"
+            android:visibility="gone"
+            tools:context=".activity.HomeActivity"
+            tools:deviceIds="tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/white"
+            android:id="@+id/movieNotFoundMessage"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:fontFamily="@font/myriadpro_bold"
+            android:text="Movie not found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    top bar layout-->
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:id="@+id/topLayout"
+        android:layout_marginEnd="45dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:focusable="true"
+            android:clickable="true"
+            android:padding="2dp"
+            android:id="@+id/btnHome"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/homebutton_image"
+                android:paddingTop="2dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:textColor="@color/white"
+                android:gravity="bottom|center"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:text="Home"
+                android:textSize="20px"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/btnSearch"
+            android:padding="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:src="@drawable/searchbutton"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="Search"
+                android:textSize="20px"
+                android:id="@+id/tvSearch"
+                android:textColor="@color/white"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:layout_marginStart="4dp"
+                android:layout_width="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/signIN"
+            android:visibility="gone"
+            android:padding="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/sign_inbutton"
+                android:layout_width="12dp"
+                android:layout_height="12dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="Sign In"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:layout_marginStart="4dp"
+                android:id="@+id/tvSignIn"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="bottom|center"
+                android:layout_width="wrap_content"
+                android:textSize="20px"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/btnSettings"
+            android:padding="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/settings_icon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="4dp"
+                android:text="Settings"
+                android:id="@+id/tvSetting"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:textSize="20px"
+                android:gravity="bottom|center"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:layout_width="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/btnProfile"
+            android:visibility="gone"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:scaleType="fitXY"
+                android:src="@drawable/smallbadge"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="4dp"
+                android:gravity="bottom|center"
+                android:id="@+id/profileName"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:textSize="20px"
+                android:textColor="@color/white"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <!--terms and condition layout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/layoutHometc"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/logobackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        <androidx.appcompat.widget.AppCompatTextView-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:fontFamily="@font/myriadpro_bold"-->
+        <!--            android:textSize="25sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:id="@+id/tvhomeTc"-->
+        <!--            android:maxLines="5"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"/>-->
+
+
+        <ScrollView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/tcHomeScroll"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/white"
+                android:id="@+id/tvHomeContent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="13dp"
+                android:clickable="false"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="30dp"
+                android:paddingBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/transparent2"
+        android:id="@+id/logoutDialog"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/white"
+            android:layout_width="270dp"
+            android:layout_height="150dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:id="@+id/tvLogoutMessage"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:fontFamily="@font/myriadpro_bold"
+                android:text="Are you sure that you want to logout ?"
+                android:textColor="@color/black"
+                android:maxLines="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvLogoutMessage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/tvLogoutConti"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:nextFocusRight="@id/tvcancle"
+                    android:nextFocusUp="@id/tvLogoutConti"
+                    android:nextFocusDown="@id/tvLogoutConti"
+                    android:nextFocusLeft="@id/tvLogoutConti"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/myriad_pro_regular"
+                    android:text="Continue"
+                    android:textColor="@color/black"
+                    android:layout_width="120dp"
+                    android:layout_height="25dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/tvcancle"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:nextFocusRight="@id/tvcancle"
+                    android:nextFocusUp="@id/tvcancle"
+                    android:nextFocusDown="@id/tvcancle"
+                    android:nextFocusLeft="@id/tvLogoutConti"
+                    android:fontFamily="@font/myriad_pro_regular"
+                    android:text="Cancel"
+                    android:textColor="@color/black"
+                    android:layout_width="120dp"
+                    android:layout_height="25dp"/>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/homeProgress"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/my_progress_indeterminate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

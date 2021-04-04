@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_search">#80C1B7B7</color>
+    <color name="transparent2">#EB090606</color>
+
+    <color name="yellow">#DC8F26</color>
+
+
+    <!--Login from psd-->
+
+
+    <color name="blueTransparent">#F3010120</color>
+    <color name="blueTransparent2">#EE010123</color>
+    <color name="default_text_color">#1E379F</color>
+
+</resources>

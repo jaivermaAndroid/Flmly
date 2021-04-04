@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/main_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:padding="3dp"
+        android:background="@drawable/text_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/goldbadge"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/desc"-->
+    <!--        android:layout_width="90dp"-->
+    <!--        android:layout_height="18dp"-->
+    <!--        android:ellipsize="marquee"-->
+    <!--        android:fontFamily="@font/opensans_bold"-->
+    <!--        android:gravity="start"-->
+    <!--        android:marqueeRepeatLimit="marquee_forever"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:layout_marginStart="3dp"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/main_image"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/layout1"-->
+    <!--        android:layout_width="180dp"-->
+    <!--        android:layout_height="22dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textDescription"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--        <TextView-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/desc"-->
+    <!--            android:id="@+id/textTitle"-->
+    <!--            android:layout_width="90dp"-->
+    <!--            android:layout_marginStart="3dp"-->
+    <!--            android:layout_height="15dp"-->
+    <!--            android:layout_below="@+id/main_image"-->
+    <!--            android:fontFamily="@font/opensans_bold"-->
+    <!--            android:gravity="start"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/twelv_sp"-->
+    <!--            />-->
+
+    <!--    </LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

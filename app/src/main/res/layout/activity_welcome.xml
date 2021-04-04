@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signupimagebackground"
+    tools:context=".activity.WelcomeActivity">
+
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/mainLayout"-->
+    <!--        android:visibility="visible"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <ImageView
+        android:src="@drawable/signupoverlay"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:id="@+id/imgLogo"
+        android:layout_marginStart="60px"
+        android:src="@drawable/flmly_logo"
+        android:layout_width="182dp"
+        android:layout_height="75dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        android:text="@string/short_movie"
+        android:textSize="65px"
+        android:gravity="start"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/myriadpro_bold"
+        android:textColor="@color/white"
+        android:layout_marginStart="60px"
+        android:maxLines="2"
+        android:id="@+id/textshortMovies"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textshortMovies"
+        android:background="@drawable/signup_selecter"
+        android:layout_width="132dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/tvSignp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="60px"
+        android:layout_height="32dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toEndOf="@+id/tvSignp"
+        app:layout_constraintTop_toBottomOf="@+id/textshortMovies"
+        android:background="@drawable/login_selecter"
+        android:layout_width="90dp"
+        android:id="@+id/tvLogin"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="35px"
+        android:layout_height="32dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_subscribe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignp"
+        android:layout_marginStart="60px"
+        android:textSize="11sp"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/myriadpro_light"
+        android:layout_marginTop="10dp"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvskipp"
+        android:layout_marginTop="56dp"
+        android:layout_marginStart="60px"
+        android:background="@drawable/skip_selecter"
+        android:focusable="true"
+        android:clickable="true"
+        android:nextFocusDown="@id/tv_terms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subscribe"
+        android:layout_width="215dp"
+        android:layout_height="32dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvskipp"
+        android:id="@+id/tv_terms"
+        android:nextFocusRight="@id/tv_privacy"
+        android:text="@string/terms"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:fontFamily="@font/myriad_pro_regular"
+        android:layout_marginStart="60px"
+        android:layout_marginTop="55dp"
+        android:paddingBottom="3dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toEndOf="@+id/tv_terms"
+        app:layout_constraintTop_toBottomOf="@+id/tvskipp"
+        android:id="@+id/tv_and"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/myriad_pro_regular"
+        android:text="and"
+        android:textSize="12sp"
+        android:layout_marginTop="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toEndOf="@+id/tv_and"
+        app:layout_constraintTop_toBottomOf="@+id/tvskipp"
+        android:id="@+id/tv_privacy"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/privacy"
+        android:textSize="12sp"
+        android:focusable="true"
+        android:clickable="true"
+        android:paddingBottom="3dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/myriad_pro_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+
+
+
+    <!--    terms and condition layout-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/layout_tc"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/logobackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        <TextView-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:fontFamily="@font/myriadpro_bold"-->
+        <!--            android:textSize="25sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:id="@+id/tvTc"-->
+        <!--            android:maxLines="5"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"/>-->
+
+        <!--        <WebView-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/tvTc"-->
+        <!--            android:visibility="gone"-->
+        <!--            android:background="@drawable/background"-->
+        <!--            android:id="@+id/webview"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"/>-->
+
+        <ScrollView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/tcScroll"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/tvContent"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="13dp"
+                android:clickable="false"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:gravity="fill"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="13dp"
+                android:paddingBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/layout_signup"
+        android:visibility="gone"
+        android:background="@drawable/logobackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:layout_marginTop="50dp"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:id="@+id/tvSignupHeading"
+            android:text="Welcome to Flmly."
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_width="410dp"
+            android:layout_height="40dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignupHeading"
+            android:textColor="@color/white"
+            android:layout_marginTop="7dp"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:fontFamily="@font/myriad_pro_regular"
+            android:id="@+id/tvSignupText"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignupText"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:id="@+id/tvSignupWhenText"
+            android:text="When you sign up"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/text1"
+            android:gravity="start"
+            android:layout_marginTop="22dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignupWhenText"
+            android:layout_width="350dp"
+            android:orientation="horizontal"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/signupcheckmark"
+                android:layout_height="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="6dp"
+                android:textStyle="normal"
+                android:fontFamily="@font/myriadpro_light"
+                android:text="All movies are exclusive on Flmly"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/text2"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/text1"
+            android:layout_width="350dp"
+            android:orientation="horizontal"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/signupcheckmark"
+                android:layout_height="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="6dp"
+                android:textStyle="normal"
+                android:fontFamily="@font/myriadpro_light"
+                android:text="Unlimited viewing on multiple devices"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/text3"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@+id/text2"
+            android:layout_width="350dp"
+            android:orientation="horizontal"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/signupcheckmark"
+                android:layout_height="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/myriadpro_light"
+                android:layout_marginStart="6dp"
+                android:textStyle="normal"
+                android:text="Watch movies created by real families"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/text4"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/text3"
+            android:layout_width="350dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/signupcheckmark"
+                android:layout_height="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/myriadpro_light"
+                android:layout_marginStart="6dp"
+                android:text="Child safe family appropriate"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="27dp"
+            app:layout_constraintTop_toBottomOf="@+id/text4"
+            android:layout_width="350dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/signupcheckmark"
+                android:layout_height="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/myriadpro_light"
+                android:id="@+id/tvsignupPrice"
+                android:layout_marginStart="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"/>
+
+        </LinearLayout>
+
+
+
+        <!--        <ImageView-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            android:src="@drawable/screenshot4"-->
+        <!--            android:scaleType="fitXY"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="0dp"/>-->
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="66dp"
+            android:id="@+id/tvBack"
+            android:nextFocusLeft="@id/tvBack"
+            android:nextFocusRight="@id/tvBack"
+            android:nextFocusUp="@id/tvBack"
+            android:nextFocusDown="@id/tvBack"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/signupbackbutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- login layout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/LoginLayout"
+        android:visibility="gone"
+        android:background="@color/blueTransparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp"
+            android:id="@+id/img_login_Logo"
+            android:src="@drawable/flmly_logo"
+            android:layout_width="182dp"
+            android:layout_height="70dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_login_Logo"
+            android:text="Log in with your email and password"
+            android:textColor="@color/white"
+            android:fontFamily="@font/myriadpro_bold"
+            android:id="@+id/tvLoginText"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/layout1"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmail"
+                android:hint="Email"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="textEmailAddress"
+                android:nextFocusRight="@id/etPass"
+                android:nextFocusLeft="@id/etEmail"
+                android:nextFocusUp="@id/etEmail"
+                android:nextFocusDown="@id/tvContinue"
+                android:imeOptions="actionNext"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="5dp"
+                android:fontFamily="@font/myriad_pro_bold_semiextended"
+                android:background="@drawable/edit_text_selecter"
+                android:textColorHint="@color/white"
+                android:gravity="start|center"
+                android:layout_width="195dp"
+                android:layout_height="32dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPass"
+                android:hint="Password"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="textPassword"
+                android:paddingStart="5dp"
+                android:layout_marginStart="8dp"
+                android:nextFocusLeft="@id/etEmail"
+                android:nextFocusUp="@id/etPass"
+                android:nextFocusDown="@id/tvContinue"
+                android:fontFamily="@font/myriad_pro_bold_semiextended"
+                android:background="@drawable/edit_text_selecter"
+                android:textColorHint="@color/white"
+                android:gravity="start|center"
+                android:layout_width="195dp"
+                android:layout_height="32dp"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvContinue"
+            android:layout_width="195dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="277dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/continue_selecter"
+            android:nextFocusDown="@id/tvContinue"
+            android:nextFocusLeft="@id/tvContinue"
+            android:nextFocusRight="@id/tvContinue"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ProgressBar
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"
+        android:id="@+id/welcomeProgress"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/my_progress_indeterminate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
