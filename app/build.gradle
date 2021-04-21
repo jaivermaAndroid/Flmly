@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
-
+//passwords for keystore and alias : 1234567890
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
@@ -15,11 +15,13 @@ android {
         applicationId "com.flmly.tv"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 3
+        versionCode 6
         versionName "1.0"
 
-    }
+//        Android VersionCode 6
+//        Android VersionCode 3
 
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -44,6 +46,5 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer:2.12.2'
     implementation 'com.google.android.exoplayer:extension-leanback:2.12.2'
     implementation 'com.google.android.exoplayer:exoplayer-ui:r2.4.0'
-
 
 }

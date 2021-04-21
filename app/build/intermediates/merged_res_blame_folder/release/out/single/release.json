@@ -1,0 +1,354 @@
+[
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_smallcertificate.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\smallcertificate.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_rate_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\rate_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_search_edttext_normal.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\search_edttext_normal.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_logobackground.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\logobackground.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_my_progress_indeterminate.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\my_progress_indeterminate.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_welcome.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_ppensans_semibold_italic.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\ppensans_semibold_italic.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_signupoverlay.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\signupoverlay.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_purpleplayicon.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\purpleplayicon.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_viewers_overlay.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\viewers_overlay.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_opensans_extra_bold.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\opensans_extra_bold.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_search_edit_text_focus.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\search_edit_text_focus.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_ovrly.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\ovrly.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_video_shado.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\video_shado.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_login_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\login_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_text_selector.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\text_selector.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_moreinfo.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\moreinfo.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_play_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\play_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_home_bg.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\home_bg.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_continuewhite.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\continuewhite.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_player.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\layout\\activity_player.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_settings_icon.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\settings_icon.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_open_sans_light_italic.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\open_sans_light_italic.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_tvtrailerbuttonhighlight.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\tvtrailerbuttonhighlight.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_opensans_bold.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\opensans_bold.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_skipfornowbutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\skipfornowbutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_signupbackbutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\signupbackbutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_myriadpro_light.otf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\myriadpro_light.otf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_details_play_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\details_play_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_home.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\layout_exo_playback_control_view.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\layout\\exo_playback_control_view.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_edit_text_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\edit_text_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_exit_button.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\exit_button.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_flmly_logo.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\flmly_logo.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_skipfornowwhitebutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\skipfornowwhitebutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_playhighlightedbutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\playhighlightedbutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_password_field.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\password_field.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_search_edit_text_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\search_edit_text_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_more_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\more_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_continue_c.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\continue_c.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_opensans_regular.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\opensans_regular.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_signupimagebackground.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\signupimagebackground.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_splash_1920.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\splash_1920.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_trailer_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\trailer_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_tvratebutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\tvratebutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_yellow_star.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\yellow_star.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_animation.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\animation.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_viewersdetailspageoverlay.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\viewersdetailspageoverlay.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_textnormal.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\textnormal.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_homebutton_image.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\homebutton_image.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_moreinfohighlighted.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\moreinfohighlighted.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_skip_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\skip_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_searchbutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\searchbutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_signupwhitebutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\signupwhitebutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_loginwhitebutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\loginwhitebutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_opensans_extrabold_italic.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\opensans_extrabold_italic.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_polygon.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\polygon.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_custom_rattingbar.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\custom_rattingbar.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_spin.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\spin.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_tvratebuttonhighlight.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\tvratebuttonhighlight.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_signupbutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\signupbutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_myriadpro_blacksemicn.otf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\myriadpro_blacksemicn.otf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_video_shade.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\video_shade.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_continue_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\continue_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_open_sans_italic.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\open_sans_italic.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_myriad_pro_regular.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\myriad_pro_regular.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_open_sans_bolditalic.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\open_sans_bolditalic.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_white_star.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\white_star.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_loginbutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\loginbutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_small_poly.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\small_poly.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_back_arrow.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\back_arrow.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_search.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_text_focus.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\text_focus.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_details.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\layout\\activity_details.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_tvplaybutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\tvplaybutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_signupcheckmark.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\signupcheckmark.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_signup_selecter.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\signup_selecter.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_sign_inbutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\sign_inbutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_myriadpro_bold.otf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\myriadpro_bold.otf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_tvtrailerbutton.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\tvtrailerbutton.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\layout_custom_layout.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\layout\\custom_layout.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_highlightedfield.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\highlightedfield.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_myriad_pro_bold_semiextended.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\myriad_pro_bold_semiextended.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_smallbadge.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\smallbadge.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_open_sans_light.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\open_sans_light.ttf"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\drawable_banner.png.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\drawable\\banner.png"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_splash.xml.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\build\\intermediates\\res\\merged\\release\\font_opensans_semibold.ttf.flat",
+        "source": "D:\\Flmly_1_march\\Complete\\Flmly_fireTVComplete\\Flmly_fireTV\\app\\src\\main\\res\\font\\opensans_semibold.ttf"
+    }
+]

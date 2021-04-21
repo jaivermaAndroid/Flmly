@@ -1,0 +1,22 @@
+com/flmly/tv/utility/CategoryPresenter.java
+ com.flmly.tv.utility.CategoryPresenter
+ com.flmly.tv.utility.CategoryPresenter$1
+ com.flmly.tv.utility.CategoryPresenter$ViewHolder
+com/flmly/tv/utility/CardPresenter.java
+ com.flmly.tv.utility.CardPresenter
+ com.flmly.tv.utility.CardPresenter$1
+ com.flmly.tv.utility.CardPresenter$ViewHolder
+com/flmly/tv/model/DetailsModel.java
+ com.flmly.tv.model.DetailsModel
+com/flmly/tv/model/SearchModel.java
+ com.flmly.tv.model.SearchModel
+com/flmly/tv/model/ContentDetailsModel.java
+ com.flmly.tv.model.ContentDetailsModel
+com/flmly/tv/BuildConfig.java
+ com.flmly.tv.BuildConfig
+com/flmly/tv/model/HomeModel.java
+ com.flmly.tv.model.HomeModel
+com/flmly/tv/model/LoginModel.java
+ com.flmly.tv.model.LoginModel
+com/flmly/tv/utility/CustomCardView.java
+ com.flmly.tv.utility.CustomCardView

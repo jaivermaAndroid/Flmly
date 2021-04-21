@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flmly.tv"
+    android:versionCode="3"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:banner="@drawable/banner"
+        android:debuggable="true"
+        android:icon="@drawable/splash_1920"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/flmly"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.flmly.tv.activity.PlayerActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.flmly.tv.activity.DetailsActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.flmly.tv.activity.HomeActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.flmly.tv.activity.WelcomeActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.flmly.tv.activity.SplashActivity"
+            android:screenOrientation="fullSensor" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
