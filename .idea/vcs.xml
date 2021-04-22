@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/amazon-fire-tv" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/androidtv" vcs="Git" />
   </component>
 </project>
