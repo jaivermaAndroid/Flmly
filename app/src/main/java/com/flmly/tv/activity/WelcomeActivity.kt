@@ -142,7 +142,7 @@ class WelcomeActivity : Activity() {
 
         tvPrivacy.setOnFocusChangeListener(View.OnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
-//                tvPrivacy.setTextSize(14f) //increased size
+                tvPrivacy.setTextSize(14f) //increased size
                 val type = Typeface.createFromAsset(assets, "font/myriadpro_bold.otf")
                 tvPrivacy.setTypeface(type)
 //                tvPrivacy.setTypeface(null, )
@@ -158,7 +158,7 @@ class WelcomeActivity : Activity() {
             if (hasFocus) {
                 val type = Typeface.createFromAsset(assets, "font/myriadpro_bold.otf")
                 tvTerms.setTypeface(type)
-//                tvTerms.setTextSize(14f) //increased size
+                tvTerms.setTextSize(14f) //increased size
 //                tvTerms.setTypeface(null, Typeface.BOLD)
 
 //                ((TextView)findViewById(R.id.tv_terms)).setTypeface(Typeface.DEFAULT_BOLD);
@@ -313,7 +313,7 @@ class WelcomeActivity : Activity() {
                     Log.e(TAG, "$response")
                     val jsonObject = JSONObject(response)
                     val js2=jsonObject.getJSONObject("data")
-                    tvSubscribe.text="Subscribe for $"+js2.getString("flmly_monthly_subscription_amount")+" /month"
+                    tvSubscribe.text="Subscribe for $"+js2.getString("flmly_monthly_subscription_amount")+" / month"
                     tvsignupPrice.text="Unlimited viewing for $"+js2.getString("flmly_monthly_subscription_amount")+" /month"
                     progressBar.visibility=View.GONE
 //                    text_pp=jsonObject.getString("privacy")

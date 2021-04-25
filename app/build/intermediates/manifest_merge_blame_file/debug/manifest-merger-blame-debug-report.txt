@@ -51,52 +51,51 @@
 29-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:22:9-41
 30        android:supportsRtl="true"
 30-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:23:9-35
-31        android:testOnly="true"
-32        android:theme="@style/flmly"
-32-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:24:9-37
-33        android:usesCleartextTraffic="true" >
-33-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:25:9-44
-34        <activity
-34-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:28:9-30:63
-35            android:name="com.flmly.tv.activity.PlayerActivity"
-35-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:29:13-52
-36            android:screenOrientation="fullSensor" />
-36-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:30:13-51
-37        <activity
-37-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:31:9-33:54
-38            android:name="com.flmly.tv.activity.DetailsActivity"
-38-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:32:13-53
-39            android:screenOrientation="fullSensor" />
-39-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:33:13-51
-40        <activity
-40-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:34:9-36:54
-41            android:name="com.flmly.tv.activity.HomeActivity"
-41-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:35:13-50
-42            android:screenOrientation="fullSensor" />
-42-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:36:13-51
-43        <activity
-43-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:37:9-39:54
-44            android:name="com.flmly.tv.activity.WelcomeActivity"
-44-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:38:13-53
-45            android:screenOrientation="fullSensor" />
-45-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:39:13-51
-46        <activity
-46-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:40:9-48:20
-47            android:name="com.flmly.tv.activity.SplashActivity"
-47-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:41:13-52
-48            android:screenOrientation="fullSensor" >
-48-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:42:13-51
-49            <intent-filter>
-49-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:43:13-47:29
-50                <action android:name="android.intent.action.MAIN" />
-50-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:44:17-69
-50-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:44:25-66
-51
-52                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-52-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:46:17-86
-52-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:46:27-83
-53            </intent-filter>
-54        </activity>
-55    </application>
-56
-57</manifest>
+31        android:theme="@style/flmly"
+31-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:24:9-37
+32        android:usesCleartextTraffic="true" >
+32-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:25:9-44
+33        <activity
+33-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:28:9-30:63
+34            android:name="com.flmly.tv.activity.PlayerActivity"
+34-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:29:13-52
+35            android:screenOrientation="fullSensor" />
+35-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:30:13-51
+36        <activity
+36-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:31:9-33:54
+37            android:name="com.flmly.tv.activity.DetailsActivity"
+37-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:32:13-53
+38            android:screenOrientation="fullSensor" />
+38-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:33:13-51
+39        <activity
+39-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:34:9-36:54
+40            android:name="com.flmly.tv.activity.HomeActivity"
+40-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:35:13-50
+41            android:screenOrientation="fullSensor" />
+41-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:36:13-51
+42        <activity
+42-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:37:9-39:54
+43            android:name="com.flmly.tv.activity.WelcomeActivity"
+43-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:38:13-53
+44            android:screenOrientation="fullSensor" />
+44-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:39:13-51
+45        <activity
+45-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:40:9-48:20
+46            android:name="com.flmly.tv.activity.SplashActivity"
+46-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:41:13-52
+47            android:screenOrientation="fullSensor" >
+47-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:42:13-51
+48            <intent-filter>
+48-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:43:13-47:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:44:17-69
+49-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:44:25-66
+50
+51                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+51-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:46:17-86
+51-->D:\Flmly_1_march\Complete\Flmly_fireTVComplete\Flmly_fireTV\app\src\main\AndroidManifest.xml:46:27-83
+52            </intent-filter>
+53        </activity>
+54    </application>
+55
+56</manifest>

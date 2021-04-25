@@ -427,7 +427,7 @@
     <color name="lb_basic_card_content_text_color">#B3EEEEEE</color>
     <color name="lb_basic_card_info_bg_color">#FF37474F</color>
     <color name="lb_basic_card_title_text_color">#FFEEEEEE</color>
-    <color name="lb_browse_header_color">#FFFFFF</color>
+    <color name="lb_browse_header_color">#ffffff</color>
     <color name="lb_browse_header_description_color">#AAFFFFFF</color>
     <color name="lb_browse_title_color">#EEEEEE</color>
     <color name="lb_control_button_color">#66EEEEEE</color>

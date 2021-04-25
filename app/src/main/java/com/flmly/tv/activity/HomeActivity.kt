@@ -1568,8 +1568,9 @@ class HomeActivity : FragmentActivity(),View.OnClickListener {
                     searchFragment!!.loadData(searchEditText.text.toString())
                 }else{
                     searchEditText.setText("")
+//                    movieNotFoundText.visibility=View.GONE
                     searchFragment!!.clearAdapter()
-                    searchFragment!!.loadData(searchEditText.text.toString())
+//                    searchFragment!!.loadData(searchEditText.text.toString())
                     tvAlphaDelete.requestFocus()
                 }
 
@@ -1588,7 +1589,8 @@ class HomeActivity : FragmentActivity(),View.OnClickListener {
                 }else{
                     searchEditText.setText("")
                     searchFragment!!.clearAdapter()
-                    searchFragment!!.loadData(searchEditText.text.toString())
+//                    movieNotFoundText.visibility=View.GONE
+//                    searchFragment!!.loadData(searchEditText.text.toString())
                     tvnumDelete.requestFocus()
                 }
             }

@@ -164,7 +164,7 @@
             android:orientation="horizontal"
             android:layout_height="30dp">
             <ImageView
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_marginStart="3dp"
                 android:src="@drawable/signupcheckmark"
                 android:layout_height="20dp"/>
@@ -193,7 +193,7 @@
             android:orientation="horizontal"
             android:layout_height="30dp">
             <ImageView
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_marginStart="3dp"
                 android:src="@drawable/signupcheckmark"
                 android:layout_height="20dp"/>
@@ -221,7 +221,7 @@
             android:orientation="horizontal"
             android:layout_height="30dp">
             <ImageView
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_marginStart="3dp"
                 android:src="@drawable/signupcheckmark"
                 android:layout_height="20dp"/>
@@ -249,7 +249,7 @@
             android:orientation="horizontal"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_marginStart="3dp"
                 android:src="@drawable/signupcheckmark"
                 android:layout_height="20dp"/>
@@ -277,7 +277,7 @@
             android:orientation="horizontal"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_marginStart="3dp"
                 android:src="@drawable/signupcheckmark"
                 android:layout_height="20dp"/>

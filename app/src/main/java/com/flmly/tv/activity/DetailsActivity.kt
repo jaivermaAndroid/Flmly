@@ -207,7 +207,6 @@ class DetailsActivity : Activity() {
                         tvDetailsDuration.text =
                             "\u2022 " + (jsonObjectEpisode.getInt("duration") / 60).toInt() + "m"
 
-
                         Log.d("token", "auth tokn " + HomeActivity.auth+"status "+ jsonObjectEpisode.getString("status"))
                         if (jsonObjectEpisode.getString("status").equals("PUBLISHED") ) {
                             Log.d("checkccc","11"+"status  : "+jsonObjectEpisode.getString("status"))
@@ -359,8 +358,8 @@ class DetailsActivity : Activity() {
                         }
                         ratting.rating = js2.getDouble("rating").toFloat()
 
-                        Log.d("zz","rate:    "+js2.getDouble("rating").toFloat())
-                        Log.d("cc","outside_myRatting:  "+js2.getString("my_rating"))
+                        Log.d("ccc","rate:    "+js2.getDouble("rating").toFloat())
+                        Log.d("ccc","outside_myRatting:  "+js2.getString("my_rating"))
                         details_series_id=js2.getString("series_id")
 
                         if (js2.getInt("my_rating")>0) {
@@ -390,7 +389,7 @@ class DetailsActivity : Activity() {
                                 starImage3.setImageResource(R.drawable.yellow_star);
                                 starImage4.setImageResource(R.drawable.yellow_star);
                             }
-                            else if (jsonObjectEpisode.getInt("my_rating") == 5)
+                            else if (js2.getInt("my_rating") == 5)
                             {
                                 rate=5
                                 starImage1.setImageResource(R.drawable.yellow_star);
@@ -665,7 +664,7 @@ class DetailsActivity : Activity() {
         jsonObject1.put("series_id", details_series_id)
         jsonObject1.put("rating", rate)
 
-        Log.d("cc","ratting:   "+rate+"    Series _id:  "+details_series_id )
+        Log.d("cc","ratting:   "+rate+"    Series _id:  "+details_series_id +"Rate ")
         val requestBody = jsonObject1.toString()
         val stringRequest: StringRequest = object : StringRequest(
             Method.POST,
